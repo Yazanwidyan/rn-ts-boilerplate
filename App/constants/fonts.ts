@@ -1,0 +1,10 @@
+export const fontDruk = 'DrukApp-HeavyItalic';
+export const fontDrukSuperItalic = 'DrukApp-SuperItalic';
+export const fontDrukText = 'DrukTextApp-HeavyItalic';
+export const fontDrukWide = 'DrukWideApp-HeavyItalic';
+export const fontDrukWideRegular = 'DrukWideApp-bold';
+export const fontDrukWideSuperItalic = 'DrukWideApp-SuperItalic';
+export const fontInterBold = 'Inter-Bold';
+export const fontInterSemiBold = 'Inter-SemiBold';
+export const fontInterRegular = 'Inter-Regular';
+export const fontCaveatBold = 'Caveat-Bold';
