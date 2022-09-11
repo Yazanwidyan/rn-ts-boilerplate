@@ -32,7 +32,6 @@ const Lang = () => {
         <Typography
           style={i18n.language === 'ar' ? styles.arabicText : {}}
           variant="headline"
-          color={'black'}
           value={'english_text'}
         />
       </TouchableOpacity>
@@ -41,7 +40,6 @@ const Lang = () => {
         style={styles.touchableStyle}>
         <Typography
           variant="headline"
-          color={'black'}
           style={i18n.language === 'en' ? styles.arabicTextAr : {}}
           value={'arabic_text'}
         />

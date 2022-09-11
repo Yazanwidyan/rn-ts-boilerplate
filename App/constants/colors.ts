@@ -24,7 +24,6 @@ export const white_70 = 'rgba(255,255,255, 0.7)';
 export const white_80 = 'rgba(255,255,255, 0.8)';
 export const white_90 = 'rgba(255,255,255, 0.9)';
 
-
 // Secondary
 export const error = '#FF173D';
 export const error_10 = '#FF173D1A';
@@ -32,3 +31,9 @@ export const success = '#58B150';
 export const success_10 = '#58B1501A';
 export const transparent = 'transparent';
 export const warning = '#FCE5E9';
+
+export const backgroundLight = '#F9F9F9';
+export const secondaryLight = white_90;
+
+export const backgroundDark = '#252A2D';
+export const secondaryDark = '#1D2123';

@@ -2,13 +2,17 @@ import React, {FC, Children, isValidElement, cloneElement} from 'react';
 import {Text} from 'react-native';
 import {useTranslation} from 'react-i18next';
 
-import {white} from '@APPNAME/constants';
+import {black_80, success, white, white_80} from '@APPNAME/constants';
 import {languageDetector} from '@APPNAME/utils';
 import {TypographyProps} from '@types';
 
 import styles from './Typography.style';
+import {getIsDarkMode} from '@APPNAME/redux/selectors/account.selectors';
+import {useSelector} from 'react-redux';
 
 const Typography: FC<TypographyProps> = props => {
+  const isDarkMode = useSelector(getIsDarkMode);
+
   const {t} = useTranslation();
   const {
     value,
@@ -32,7 +36,7 @@ const Typography: FC<TypographyProps> = props => {
       {...props}
       style={[
         styles[variant || 'headline'],
-        {color: color || white},
+        {color: isDarkMode ? color || white_80 : color || success},
         fontSize ? {fontSize: fontSize} : {},
         textAlign ? {textAlign: textAlign} : {},
         lineHeight ? {lineHeight: lineHeight} : {},

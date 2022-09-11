@@ -46,7 +46,6 @@ const Button: FC<ButtonProps> = ({
         ) : (
           <Typography
             variant="smallNote"
-            color={black}
             style={[styles.title, customTitleStyle]}
             value={title || ''}
             fontSize={width > 374 ? 16 : 13}

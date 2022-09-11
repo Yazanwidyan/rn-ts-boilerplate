@@ -3,12 +3,18 @@ import {AccountProps} from '@types';
 
 const initialState: AccountProps = {
   user: {},
+  deviceInfo: {
+    isDarkMode: false,
+  },
 };
 
 const slice = createSlice({
   name: 'accountReducer',
   initialState: initialState,
   reducers: {
+    setDarkMode: (state = initialState, action) => {
+      state.deviceInfo.isDarkMode = action.payload;
+    },
     login: (state = initialState, action) => {
       state.user = action.payload;
     },
@@ -20,4 +26,4 @@ const slice = createSlice({
 
 export default slice.reducer;
 
-export const {login, logout} = slice.actions;
+export const {login, logout, setDarkMode} = slice.actions;

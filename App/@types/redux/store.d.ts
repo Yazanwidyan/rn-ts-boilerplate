@@ -5,6 +5,9 @@ export interface StoreProps {
 
 export interface AccountProps {
   user: {};
+  deviceInfo: {
+    isDarkMode: boolean;
+  };
 }
 
 export interface LoadingProps {
