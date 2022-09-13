@@ -8,22 +8,25 @@ import {GlobalStyles} from '@APPNAME/utils';
 import {AppProps} from '@types';
 
 import Navigation from './navigation';
-import {store} from './redux/store';
+import {persistor, store} from './redux/store';
 import './i18n';
+import {PersistGate} from 'redux-persist/integration/react';
 
 const App: FC<AppProps> = () => {
   return (
     <Provider store={store}>
-      <SafeAreaProvider>
-        <View style={[GlobalStyles.fill]}>
-          <StatusBar
-            translucent
-            backgroundColor={transparent}
-            barStyle="dark-content"
-          />
-          <Navigation />
-        </View>
-      </SafeAreaProvider>
+      <PersistGate loading={null} persistor={persistor}>
+        <SafeAreaProvider>
+          <View style={[GlobalStyles.fill]}>
+            <StatusBar
+              translucent
+              backgroundColor={transparent}
+              barStyle="dark-content"
+            />
+            <Navigation />
+          </View>
+        </SafeAreaProvider>
+      </PersistGate>
     </Provider>
   );
 };
