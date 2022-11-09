@@ -10,6 +10,7 @@ import {
   Microloader,
   Button,
   ScreensContainer,
+  SignatureSkeleton,
 } from '@APPNAME/components';
 import {
   backgroundDark,
@@ -68,6 +69,7 @@ const Home = () => {
             <Typography variant="wide" value={`${'home'}`} lineHeight={18} />
             <Lang />
             <Button title="toggle theme" onPress={toggleTheme} />
+            {/* <SignatureSkeleton /> */}
           </>
         )}
       </ScreensContainer>
